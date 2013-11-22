@@ -5,11 +5,27 @@
  * license: http://www.opensource.org/licenses/mit-license.php
  */
 (function($) {
-	$.fn.timereel = function(options) {
-		
-	};
+	var TIMEREEL = {
+		box: null
+	}
 	
-	function init() {
-		
+	$.fn.timereel = function(options) {
+		var wrapper = this;
+		console.log(options);
+		wrapper.html($tag('div').addClass('timereel-box'));
+		TIMEREEL.box = wrapper.find('.timereel-box');
+		TIMEREEL.box.html(options.data);
+	};
+
+	// Convenience function for creating new jQuery objects
+	function $tag(tag, id, css) {
+		var element = document.createElement(tag);
+		if (id) {
+			element.id = prefix + id;
+		}
+		if (css) {
+			element.style.cssText = css;
+		}
+		return $(element);
 	}
 })(jQuery);

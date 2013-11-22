@@ -2,8 +2,35 @@
 <html>
     <head>
         <title>Timereel Examples</title>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="../../jquery.timereel.js"></script>
     </head>
     <body>
-        
+        <div id="my-timereel">
+        </div>
+        <script>
+            var timeReelData = [
+                {
+                    time: '2010-10-10',
+                    title: 'Title 1'
+                },
+                {
+                    time: '2010-10-13',
+                    title: 'Title 2'
+                },
+                {
+                    time: '2010-10-14',
+                    title: 'Title 3'
+                },
+                {
+                    time: '2010-10-17',
+                    title: 'Title 4'
+                }
+            ];
+            
+            $('#my-timereel').timereel({
+                data: timeReelData
+            });
+        </script>
     </body>
 </html>
