@@ -14,7 +14,9 @@
 		console.log(options);
 		wrapper.html($tag('div').addClass('timereel-box'));
 		TIMEREEL.box = wrapper.find('.timereel-box');
-		TIMEREEL.box.html(options.data);
+		for(x in options.data) {
+			TIMEREEL.box.append(options.data[x].title);
+		}
 	};
 
 	// Convenience function for creating new jQuery objects
